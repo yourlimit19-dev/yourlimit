@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Gizlilik Siyasəti - YourLimit</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+<style>
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+  color: #1a1a1a;
+  line-height: 1.65;
+  background: #ffffff;
+}
+h1 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 4px;
+  color: #0f172a;
+}
+h2 {
+  font-size: 19px;
+  font-weight: 700;
+  margin-top: 36px;
+  margin-bottom: 10px;
+  color: #0f172a;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 6px;
+}
+p, li { font-size: 15px; color: #333; }
+strong { color: #0f172a; }
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 16px 0;
+}
+th, td {
+  border: 1px solid #e5e7eb;
+  padding: 8px 12px;
+  text-align: left;
+  font-size: 14px;
+}
+th { background: #f8fafc; }
+hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 28px 0;
+}
+.meta {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+a { color: #2563eb; }
+
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Gizlilik Siyasəti - YourLimit</h1>
+</header>
+<h1 id="məxfilik-siyasəti-privacy-policy">Məxfilik Siyasəti (Privacy
+Policy)</h1>
+<p><strong>Aplikasiya:</strong> YourLimit <strong>Son yenilənmə
+tarixi:</strong> 2 iyul 2026 <strong>Əlaqə:</strong>
+yourlimit19@gmail.com</p>
+<hr />
+<h2 id="giriş">1. Giriş</h2>
+<p>YourLimit (“biz”, “bizim”, “aplikasiya”) şəxsi maliyyə idarəetməsi
+üçün nəzərdə tutulmuş mobil aplikasiyadır. Bu Məxfilik Siyasəti sizin
+(istifadəçi) məlumatlarınızı necə topladığımızı, istifadə etdiyimizi,
+saxladığımızı və qoruduğumuzu izah edir. Aplikasiyanı istifadə etməklə
+siz bu siyasətin şərtlərini qəbul etmiş olursunuz.</p>
+<hr />
+<h2 id="topladığımız-məlumatlar">2. Topladığımız Məlumatlar</h2>
+<h3 id="hesab-məlumatları">2.1 Hesab Məlumatları</h3>
+<p>Aplikasiyada qeydiyyatdan keçərkən aşağıdakı məlumatları toplayırıq:
+- Email ünvanı - Hesabla bağlı digər identifikasiya məlumatları
+(məsələn, ad, istifadəçi ID-si)</p>
+<h3 id="maliyyə-məlumatları">2.2 Maliyyə Məlumatları</h3>
+<p>YourLimit-in əsas funksiyası şəxsi gəlir və xərclərin idarə
+edilməsidir. Bu məqsədlə siz özünüz aşağıdakı məlumatları daxil
+edirsiniz: - Aylıq gəlir məbləği - Xərc kateqoriyaları və məbləğləri -
+Büdcə və maliyyə hədəfləri - Digər maliyyə ilə bağlı qeydlər</p>
+<p><strong>Vacib qeyd:</strong> Bu maliyyə məlumatları yalnız sizin
+cihazınızda və/və ya bizim təhlükəsiz serverlərimizdə saxlanılır, analiz
+və hesabatlar yaratmaq üçün istifadə olunur. Bu məlumatlar heç bir
+üçüncü tərəfə satılmır və ya reklam məqsədilə paylaşılmır.</p>
+<h3 id="istifadə-statistikası-analytics">2.3 İstifadə Statistikası
+(Analytics)</h3>
+<p>Aplikasiyanın performansını yaxşılaşdırmaq üçün anonim istifadə
+statistikası toplayırıq (məsələn, hansı funksiyaların daha çox istifadə
+olunduğu, xəta halları).</p>
+<h3 id="avtomatik-toplanan-texniki-məlumatlar">2.4 Avtomatik Toplanan
+Texniki Məlumatlar</h3>
+<ul>
+<li>Cihaz növü və əməliyyat sistemi versiyası</li>
+<li>Aplikasiya versiyası</li>
+<li>Xəta (crash) hesabatları</li>
+</ul>
+<hr />
+<h2 id="üçüncü-tərəf-xidmətlər">3. Üçüncü Tərəf Xidmətlər</h2>
+<p>Aplikasiyamız aşağıdakı üçüncü tərəf xidmətlərdən istifadə edir:</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Xidmət</th>
+<th>Məqsəd</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Firebase</strong> (Google)</td>
+<td>Xəta izləmə (crash reporting) və anonim istifadə analitikası</td>
+</tr>
+<tr class="even">
+<td><strong>RevenueCat</strong></td>
+<td>Abunəlik və ödəniş idarəetməsi</td>
+</tr>
+</tbody>
+</table>
+<p>Bu xidmətlər öz məxfilik siyasətlərinə malikdir: - Firebase:
+https://firebase.google.com/support/privacy - RevenueCat:
+https://www.revenuecat.com/privacy</p>
+<p><strong>Reklam:</strong> Aplikasiyamızda reklam göstərilmir və
+istifadəçi məlumatları reklam məqsədilə istifadə olunmur və ya
+satılmır.</p>
+<hr />
+<h2 id="abunəlik-və-ödəniş-məlumatları">4. Abunəlik və Ödəniş
+Məlumatları</h2>
+<p>YourLimit abunəlik əsaslı xidmətdir. Ödəniş əməliyyatları Google Play
+Billing sistemi vasitəsilə həyata keçirilir və RevenueCat tərəfindən
+idarə olunur. Biz kredit kartı və ya bank məlumatlarınızı birbaşa
+saxlamırıq — bu məlumatlar Google Play və RevenueCat-in təhlükəsiz
+sistemlərində saxlanılır.</p>
+<hr />
+<h2 id="məlumatların-istifadə-məqsədi">5. Məlumatların İstifadə
+Məqsədi</h2>
+<p>Topladığımız məlumatları aşağıdakı məqsədlər üçün istifadə edirik: -
+Aplikasiyanın əsas funksionallığını təmin etmək (gəlir/xərc analizi) -
+Hesabınızı yaratmaq və idarə etmək - Abunəlik statusunu izləmək -
+Texniki problemləri aşkar etmək və həll etmək - Aplikasiyanı
+təkmilləşdirmək</p>
+<hr />
+<h2 id="məlumatların-saxlanması-və-təhlükəsizliyi">6. Məlumatların
+Saxlanması və Təhlükəsizliyi</h2>
+<ul>
+<li>Məlumatlarınız təhlükəsiz serverlərdə şifrələnmiş şəkildə
+saxlanılır.</li>
+<li>Yalnız aplikasiyanın işləməsi üçün zəruri olan müddət ərzində
+saxlanılır.</li>
+<li>Məlumatlarınızın icazəsiz girişdən qorunması üçün müvafiq texniki
+tədbirlər görülür.</li>
+</ul>
+<hr />
+<h2 id="istifadəçi-hüquqları">7. İstifadəçi Hüquqları</h2>
+<p>Siz aşağıdakı hüquqlara maliksiniz: - <strong>Girişi tələb
+etmək:</strong> Sizin haqqınızda saxlanılan məlumatları görmək -
+<strong>Düzəliş tələb etmək:</strong> Yanlış məlumatların düzəldilməsini
+istəmək - <strong>Silinməni tələb etmək:</strong> Hesabınızı və əlaqəli
+məlumatları silmək - <strong>Etiraz etmək:</strong> Məlumatlarınızın
+müəyyən məqsədlər üçün istifadəsinə etiraz etmək</p>
+<p>Bu hüquqlardan istifadə etmək üçün bizimlə
+<strong>yourlimit19@gmail.com</strong> ünvanı vasitəsilə əlaqə saxlaya
+bilərsiniz.</p>
+<hr />
+<h2 id="məlumatların-silinməsi">8. Məlumatların Silinməsi</h2>
+<p>Hesabınızı silmək istəsəniz: - Aplikasiyanın “Ayarlar” bölməsindən
+hesabınızı birbaşa silə bilərsiniz, <strong>VƏ YA</strong> - Bizə
+yourlimit19@gmail.com ünvanına yazaraq silinmə tələbi göndərə
+bilərsiniz</p>
+<p>Hesab silindikdən sonra şəxsi məlumatlarınız (email, maliyyə
+qeydləri) sistemlərimizdən silinəcək, qanuni tələblərə görə saxlanılması
+zəruri olan hallar istisna olmaqla.</p>
+<hr />
+<h2 id="uşaqların-məxfiliyi">9. Uşaqların Məxfiliyi</h2>
+<p>YourLimit 18 yaşdan aşağı şəxslər üçün nəzərdə tutulmayıb. Biz
+bilərəkdən 18 yaşından aşağı uşaqlardan məlumat toplamırıq. Əgər belə
+bir hal aşkar edilərsə, məlumat dərhal silinəcək.</p>
+<hr />
+<h2 id="siyasətdəki-dəyişikliklər">10. Siyasətdəki Dəyişikliklər</h2>
+<p>Bu Məxfilik Siyasətini vaxtaşırı yeniləyə bilərik. Əhəmiyyətli
+dəyişikliklər olduqda, aplikasiya daxilində bildiriş vasitəsilə sizi
+məlumatlandıracağıq. Siyasətin ən son versiyası həmişə bu səhifədə
+mövcud olacaq.</p>
+<hr />
+<h2 id="əlaqə">11. Əlaqə</h2>
+<p>Bu Məxfilik Siyasəti ilə bağlı hər hansı sualınız olarsa, bizimlə
+əlaqə saxlaya bilərsiniz:</p>
+<p><strong>Email:</strong> yourlimit19@gmail.com</p>
+<hr />
+<p><em>Bu sənəd YourLimit aplikasiyasının Google Play Store-da
+yerləşdirilməsi üçün hazırlanmışdır.</em></p>
+</body>
+</html>
